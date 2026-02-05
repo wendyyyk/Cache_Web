@@ -1,0 +1,147 @@
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%; 
+  display: block;  
+}
+
+h1 {
+  font-weight: normal; 
+  margin: 0; 
+}
+
+/* Global Styles */
+@font-face {
+  font-family: 'jf-openhuninn';
+  src: url(../fonts/jf-openhuninn-2.1.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0px;
+  font-size: 16px;
+  font-family: "jf-openhuninn";
+}
+
+/* Header */
+.header {
+  background-color: #FFE762;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 120px;
+}
+
+.logo {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul > li {
+  width: 160px;
+  height: 50px;
+}
+
+.navbar ul > li > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000000;
+}
+
+.download-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 28px;
+  border: solid 2px #333333;
+  border-radius: 36px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 4px 0 rgba(130, 130, 130, 0.25);
+  font-size: 16px;
+}
+.menu-icon {
+  display: none;
+
+}
+
+/* Hero */
+.hero{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FBF9F5;
+}
+
+.hero-content{
+  text-align: center;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.hero-content img{
+  /* width: 800px; */
+  height: auto;
+  margin: auto;
+}
+
+.hero-text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.halo{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.6;
+  transition: all 5s cubic-bezier(0.25, 1, 0.5, 1)
+}
+
+.halo-1 { background: #FFF1A8; top: 10%; left: 20%; }
+.halo-2 { background: #FFE58F; top: 60%; left: 55%; }
+.halo-3 { background: #E99432; top: 40%; left: 65%; }
+
+
+.hero-content:hover~ .halo {
+margin: 0;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(0.7);
+opacity: 0.8;
+}

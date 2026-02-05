@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fffdf5; /* 配合你圖中的米白色背景 */
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        /* 整個展示區塊的容器 */
+        .scene {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            perspective: 1200px; /* 關鍵：設定 3D 透視深度 */
+        }
+
+        /* 文字內容 */
+        .content {
+            text-align: center;
+            z-index: 10;
+        }
+
+        /* 卡片共用樣式 */
+        .card {
+            width: 180px;
+            height: 320px;
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.6s ease;
+        }
+
+        /* 製作背後的發光效果 (偽元素) */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 220, 100, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+            filter: blur(20px);
+            z-index: -1;
+        }
+
+        /* 左側卡片：向右旋轉 */
+        .card-left {
+            transform: rotateY(35deg);
+            animation: floatLeft 4s ease-in-out infinite;
+        }
+
+        /* 右側卡片：向左旋轉 */
+        .card-right {
+            transform: rotateY(-35deg);
+            animation: floatRight 4s ease-in-out infinite;
+            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+        }
+
+        /* 漂浮動畫：左 */
+        @keyframes floatLeft {
+            0%, 100% { transform: rotateY(35deg) translateY(0); }
+            50% { transform: rotateY(35deg) translateY(-15px); }
+        }
+
+        /* 漂浮動畫：右 */
+        @keyframes floatRight {
+            0%, 100% { transform: rotateY(-35deg) translateY(0); }
+            50% { transform: rotateY(-35deg) translateY(-15px); }
+        }
+
+        /* 滑鼠移上去時轉正 */
+        .card:hover {
+            transform: rotateY(0deg) scale(1.05);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scene">
+        <div class="card card-left"></div>
+
+        <div class="content">
+            <h1>創建你的人生道具庫</h1>
+            <p>讓啟發成為解答，並隨手可得</p>
+        </div>
+
+        <div class="card card-right"></div>
+    </div>
+
+</body>
+</html>
