@@ -458,7 +458,7 @@ body {
   text-align: center;
 }
 .card-body p {
-  line-height: 120%;
+  line-height: 160%;
   text-align: start;
 }
 
@@ -819,13 +819,11 @@ body {
     margin-right: 15px;
   }
 
-  .footer-container {
-    max-width: 500px;
-  }
-
   .feedbacks h1 {
     font-size: 20px;
   }
+
+
   /* Footer */
   .footer {
     height: auto;
@@ -833,6 +831,7 @@ body {
   }
 
   .footer-container {
+    max-width: 500px;
     flex-direction: column;
     gap: 40px;
     align-items: flex-start;
