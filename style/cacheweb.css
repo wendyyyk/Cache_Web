@@ -638,8 +638,9 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    display: none;
   }
-
+/* 
 .card-3d {
     position: relative;
     width: 80%;
@@ -663,7 +664,7 @@ body {
   .card-3d.left .card-inner,
   .card-3d.right .card-inner {
     transform: none !important;
-  }
+  } */
 
   .halo {
     z-index: 0;
@@ -770,7 +771,7 @@ body {
   }
 
   .logo-container a {
-    width: 100px;
+    width: 120px;
     height: 60px;
     overflow: hidden;
     display: flex;
