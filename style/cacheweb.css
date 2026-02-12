@@ -253,7 +253,7 @@ body {
 }
 .hero-img {
   width: 1000px;
-  z-index: 1;
+  z-index: 12;
   margin: auto;
 }
 
@@ -270,7 +270,7 @@ body {
 .mockup-side-text {
   position: absolute;
   width: 300px;
-  z-index: 2; 
+  z-index: 15; 
   padding: 20px 0;
   opacity: 0;
   transform: translateY(30px);
@@ -572,7 +572,7 @@ body {
     right: 20px;
     font-size: 32px;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 120;
   }
 
   #menu-control:checked ~ .navbar {
@@ -594,7 +594,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #ffe762;
-    z-index: 999;
+    z-index: 100;
     transition: 0.5s;
     display: flex;
     justify-content: center;
